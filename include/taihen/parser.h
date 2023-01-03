@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-typedef void (* taihen_config_handler)(const char *module, void *param);
+typedef void (*taihen_config_handler)(const char *module, void *param);
 
 int taihen_config_validate(const char *input);
 void taihen_config_parse(const char *input, const char *section, taihen_config_handler handler, void *param);

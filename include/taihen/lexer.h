@@ -9,22 +9,22 @@ extern "C" {
 
 typedef enum
 {
-    CONFIG_START_TOKEN,
-    CONFIG_END_TOKEN,
-    CONFIG_COMMENT_TOKEN,
-    CONFIG_SECTION_TOKEN,
-    CONFIG_SECTION_HALT_TOKEN,
-    CONFIG_SECTION_NAME_TOKEN,
-    CONFIG_PATH_TOKEN
+	CONFIG_START_TOKEN,
+	CONFIG_END_TOKEN,
+	CONFIG_COMMENT_TOKEN,
+	CONFIG_SECTION_TOKEN,
+	CONFIG_SECTION_HALT_TOKEN,
+	CONFIG_SECTION_NAME_TOKEN,
+	CONFIG_PATH_TOKEN
 } taihen_config_lexer_token;
 
 typedef struct
 {
-    const char *input;
-    const char *end;
-    taihen_config_lexer_token token;
-    char line[CONFIG_MAX_LINE_LENGTH];
-    char *line_pos;
+	const char *input;
+	const char *end;
+	taihen_config_lexer_token token;
+	char line[CONFIG_MAX_LINE_LENGTH];
+	char *line_pos;
 } taihen_config_lexer;
 
 int taihen_config_init_lexer(taihen_config_lexer *ctx, const char *input);
